@@ -1,0 +1,36 @@
+
+
+<nav class="h-full w-60 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white shadow-md p-4">
+  <ul class="space-y-4">
+
+<li>
+  <div class="flex items-center justify-between cursor-pointer" (click)="toggle('dashboard')">
+    <span class="text-medium hover:font-bold">Dashboard</span>
+  </div>
+  <ul *ngIf="expandedSections['dashboard']" class="pl-4 mt-2 space-y-2 text-sm">
+    <li><a routerLink="/dashboard" routerLinkActive="font-normal hover:text-blue-600" class="block">Overview</a></li>
+    <li><a routerLink="/dashboard/team-performance" routerLinkActive="font-normal hover:text-blue-600" class="block">Team Performance</a></li>
+  </ul>
+</li>
+
+<li>
+  <div class="flex items-center justify-between cursor-pointer" (click)="toggle('tasks')">
+    <span class="text-medium hover:font-bold">Tasks</span>
+  </div>
+  <ul *ngIf="expandedSections['tasks']" class="pl-4 mt-2 space-y-2 text-sm">
+    <li><a routerLink="/tasks" routerLinkActive="font-normal hover:text-blue-600" class="block">Task List</a></li>
+    <li><a routerLink="/tasks/add-newTasks" routerLinkActive="font-normal hover:text-blue-600" class="block">Create Task</a></li>
+  </ul>
+</li>
+
+<li>
+  <div class="flex items-center justify-between cursor-pointer" (click)="toggle('profile')">
+    <span class="text-medium hover:font-bold">Profile</span>
+  </div>
+  <ul *ngIf="expandedSections['profile']" class="pl-4 mt-2 space-y-2 text-sm">
+    <li><a routerLink="/profile" routerLinkActive="font-normal hover:text-blue-600" class="block">View Profile</a></li>
+    <li><a routerLink="/profile/edit-profile" routerLinkActive="font-normal hover:text-blue-600" class="block">Edit Profile</a></li>
+        <li><a routerLink="/profile/logout" routerLinkActive="font-normal hover:text-blue-600" class="block">LogOut User</a></li>
+
+  </ul>
+</li>
