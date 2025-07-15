@@ -1,0 +1,15 @@
+
+<h2 class="text-xl font-semibold  font-monospace mb-4">Top Performers of the Month</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div *ngFor="let user of topUsers" class="p-4 border rounded shadow hover:shadow-md transition">
+    <div class="flex items-center space-x-4">
+      <img [src]="user.photoUrl" alt="{{ user.name }}"
+           class="w-12 h-12 rounded-full object-cover border border-gray-300" />
+      <div>
+        <p class="font-semibold text-gray-900">{{ user.name }}</p>
+        <p class="text-sm text-gray-500">{{ user.tasksCompleted }} tasks completed</p>
+      </div>
+    </div>
+  </div>
+</div>

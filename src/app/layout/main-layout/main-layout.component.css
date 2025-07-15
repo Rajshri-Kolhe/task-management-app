@@ -1,0 +1,4 @@
+.layout-container {
+  height: 100vh;          /* Take full screen height */
+  overflow: hidden;       /* Prevent scrollbars unless needed inside <main> */
+}
